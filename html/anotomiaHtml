@@ -1,0 +1,23 @@
+<tag>
+  <!-- cometário -->
+  <!-- corpo da tag -->
+  <bla>
+    <opa> texto </opa>
+    <opa> texto </opa>
+    <opa> texto </opa>
+  </bla>
+</tag>
+
+<!-- HTML-->
+<Meta><br><input>
+  <tag/>
+ <meta/> <br /> <input/>
+ <tag param1="valor1" param2="valor">
+  <!-- corpo da tag-->
+ </tag>
+
+ <tag param1="valor1" param2="valor"/>
+
+ <input type="button" value="processar!">
+
+ <input type="text" v-if v-for v-else>
