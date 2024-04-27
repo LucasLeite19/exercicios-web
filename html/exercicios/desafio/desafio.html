@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio Imagem</title>
+    <link rel="stylesheet" href="desafio.css" />
+  </head>
+  <body>
+
+    <div class="slider">
+    
+      <div class="slides">
+        <input type="radio" name="radio-btn" id="radio1" />
+        <input type="radio" name="radio-btn" id="radio2" />
+        <input type="radio" name="radio-btn" id="radio3" />
+        <input type="radio" name="radio-btn" id="radio4" />
+
+        <div class="slide first">    
+
+          <img src="Img/139458-confira-x-paisagens-naturais-do-brasil-de-tirar-o-folego-1024x640.jpg" alt="" srcset="">
+
+        </div>
+    
+        <div class="slide">
+
+        <img src="Img/cachoeira-sinhozinho-boa-resolucao.jpg" alt="" srcset="">
+
+        </div>
+
+        <div class="slide">
+
+          <img src="Img/cataratas-do-igacu-paisagens-naturais-do-brasil.webp" alt="" srcset="">
+
+        </div>
+
+        <div class="slide">
+
+          <img src="Img/paisagem-natural-og.webp" alt="" srcset="">
+
+        </div>
+
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+        </div>
+      </div>
+
+      <div class="manual-navigation">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+      </div>
+    </div>
+
+    <script>
+      let count = 1;
+      document.getElementById("radio1").checked = true;
+
+      setInterval(function () {
+        nextImage();
+      }, 5000);
+
+      function nextImage() {
+        count++;
+        if (count > 4) {
+          count = 1;
+        }
+
+        document.getElementById("radio" + count).checked = true;
+      }
+    </script>
+  </body>
+</html>
