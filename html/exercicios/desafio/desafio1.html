@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Desafio Imagem</title>
-    <link rel="stylesheet" href="desafio.css" />
+    <link rel="stylesheet" href="desafio1.css" />
   </head>
   <body>
 
@@ -57,20 +57,20 @@
     </div>
 
     <script>
-      let count = 1;
-      document.getElementById("radio1").checked = true;
+      let count = 1
+      document.getElementById("radio1").checked = true
 
       setInterval(function () {
-        nextImage();
-      }, 5000);
+        nextImage()
+      }, 5000)
 
       function nextImage() {
         count++;
         if (count > 4) {
-          count = 1;
+          count = 1
         }
 
-        document.getElementById("radio" + count).checked = true;
+        document.getElementById("radio" + count).checked = true
       }
     </script>
   </body>

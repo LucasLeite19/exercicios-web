@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video</title>
+    <link rel="stylesheet" href="desafio2.css" />
+  </head>
+  <body>
+
+    <article>
+    <video id="Video" width="800" height="450">
+      <source
+        src="http://files.cod3r.com.br/curso-web/video.mp4"
+        type="video/mp4"
+      />
+      Seu browswe não suporta a tag de video
+    </video>
+    
+    <span class="controle">
+      <div>
+        <button wm-play="Video">
+          <svg
+            width="20"
+            height="20"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m21.778 10.716-13.5-8.24a1.453 1.453 0 0 0-1.51-.028A1.481 1.481 0 0 0 6 3.75v16.5a1.481 1.481 0 0 0 .769 1.303 1.453 1.453 0 0 0 1.51-.028l13.5-8.24a1.5 1.5 0 0 0 0-2.57Z"
+            ></path>
+          </svg>
+        </button>
+        <button wm-pause="Video">
+          <svg
+            width="20"
+            height="20"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20.25 4.5v15a1.5 1.5 0 0 1-1.5 1.5h-3.375a1.5 1.5 0 0 1-1.5-1.5v-15a1.5 1.5 0 0 1 1.5-1.5h3.375a1.5 1.5 0 0 1 1.5 1.5ZM8.625 3H5.25a1.5 1.5 0 0 0-1.5 1.5v15a1.5 1.5 0 0 0 1.5 1.5h3.375a1.5 1.5 0 0 0 1.5-1.5v-15a1.5 1.5 0 0 0-1.5-1.5Z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <div wm-progresso="Video" class="progresso">
+        <div></div>
+      </div>
+    </span>
+  </article>
+
+    <script>
+      function configurarVideo(id) {
+        const video = document.getElementById(id)
+        video.oncontextmenu = () => false
+
+        document.querySelector(`[wm-play=${id}]`).onclick = (e) => video.play()
+        document.querySelector(`[wm-pause=${id}]`).onclick = (e) =>
+          video.pause()
+
+        setInterval(() => {
+          const percentual = (video.currentTime / video.duration) * 100
+          const valorDiv = document.querySelector(`[wm-progresso=${id}] > div`)
+          valorDiv.style.width = `${percentual}%`
+          valorDiv.innerHTML = `${percentual.toFixed(0)}%`
+        })
+      }
+
+      configurarVideo("Video")
+    </script>
+  </body>
+</html>
