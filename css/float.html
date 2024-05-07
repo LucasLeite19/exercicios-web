@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Float</title>
     <style>
-        body {
-            background-color: #222;
-        }
+      body {
+        background-color: #212121;
+      }
 
-        .c1 {
-            background-color: red;
-        }
-
-        .c2 {
-            background-color: green;
-        }
-        
-        .c3 {
-            background-color: blue;
-        }
-
-        .c4 {
-            background-color: orange;
-        }
+      .c1 {
+        background-color: #ff0000;
+        float: right;
+      }
+      
+      .c2 {
+        background-color: #008000;
+        clear: right;     
+        float: left;
+      }
+      
+      .c3 {
+        background-color: #0000ff;
+        clear: both;
+      }
+      
+      .c4 {
+        background-color: #ffa500;
+        float: right;
+      }
+      div {
+        width: 150px;
+        height: 150px;
+   
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="c1"></div>
     <div class="c2"></div>
     <div class="c3"></div>
     <div class="c4"></div>
-</body>
-
+  </body>
 </html>
