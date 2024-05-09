@@ -1,51 +1,133 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Desafio Menu</title>
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald"
+      rel="stylesheet"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
     <style>
-        /* ... */
-    </style>
-</head>
+      body {
+        margin: 0;
+        padding: 0;
+        
+      }
+      img {
+        width: 30%;
+      }
+     
+      header{
+      display: flex;
+      background-color: #3d3d3d;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      }
 
-<body>
+      ul, li, a{
+      text-align: center;
+      display: inline-block;
+      text-decoration: none;
+      list-style: none; 
+      color: #fff;
+      }
+
+      .logo {
+      padding: 1px;
+      margin: 2px;
+      }
+
+      .botao {
+        font-size: 12px;
+        text-decoration: none;
+        padding: 8px 15px;
+        border-radius: 25px;
+        margin: 6px;
+      }
+
+      .destaque {
+        color: #fff;
+        background: tomato;
+        box-shadow: 2px 2px 1px 1px #000;
+      }
+      .destaque:active {
+        box-shadow: none;
+      }
+
+      button {
+      display: none;
+      }
+
+      nav {
+      position: absolute;
+      margin-left: 220px;
+      }
+
+      a {
+      padding: 8px;
+      margin: 2px;
+      color: #ffffff;
+      }
+      
+      a:hover {
+      background-color: #00ffff7a;
+      }
+      
+      @media (min-width: 200px, min-height:200px ) and (max-width: 600px, min-height: 600px), (orientation: portrait) {
+      nav, aside {
+      display: none;
+
+      }
+
+      button{
+      display: block;
+      }
+      }
+    </style>
+  </head>
+
+  <body>
     <header class="cabecalho">
-        <div class="logo">
-            <a href="#inicio">
-                <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="Logo" />
-            </a>
-        </div>
-        <button class="menu-toggle">
-            <i class="fa fa-lg fa-bars"></i>
-        </button>
-        <nav class="menu">
-            <ul>
-                <li>
-                    <a href="#inicio">Início</a>
-                </li>
-                <li>
-                    <a href="#cursos">Cursos</a>
-                </li>
-                <li>
-                    <a href="#sobre">Sobre</a>
-                </li>
-                <li>
-                    <a href="#contato">Contato</a>
-                </li>
-            </ul>
-        </nav>
-        <aside class="autenticacao">
-            <a href="#login">Login</a>
-            <a href="#registar" class="botao destaque">Registrar</a>
-        </aside>
+     
+      <div class="logo">
+          <img id="#inicio" src="http://files.cod3r.com.br/curso-web/logo.png" alt="Logo" />
+      </div>
+
+      <button class="botaoMenu">
+        <i class="fa fa-lg fa-bars"></i>
+      </button>
+   
+      <nav class="menu">
+        <ul>
+          <li>
+            <a href="#inicio">Início</a>
+          </li>
+          <li>
+            <a href="#cursos">Cursos</a>
+          </li>
+          <li>
+            <a href="#sobre">Sobre</a>
+          </li>
+          <li>
+            <a href="#contato">Contato</a>
+          </li>
+        </ul>
+      </nav>
+
+      <aside class="autenticacao">
+        <a href="#login">Login</a>
+        <a href="#registar" class="botao destaque">Registrar</a>
+      </aside>
+
     </header>
 
     <script>
-        // ...
+      // ...
     </script>
-</body>
-
+  </body>
 </html>
